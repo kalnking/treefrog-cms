@@ -36,10 +36,26 @@ var TREEFROG_SERVICE = (function() {
     return startBtn;
   };
 
+  var _getModelContent = function() {
+    let modelContent = `<h2>Use this box to create navigation links.</h2>
+    <br />
+    <p>
+      You can create main navigation and sub navigation. To create a
+      sub-navigation you will need to first select a main nav and then
+      create the sub-nav
+    </p>
+    <br /><br />
+    <p>Using the text box below enter the name of your main navigation.</p>
+    <input type="text" id="inputText" value="Products" />`;
+
+    return modalContent;
+  };
+
   return {
     getGetStartedContent: _getGetStartedContent,
     getCreateNavButton: _getCreateNavButton,
     getHomeContent: _getHomeContent,
-    getHomeStartButton: _getHomeStartButton
+    getHomeStartButton: _getHomeStartButton,
+    getModelContent: _getModelContent
   };
 })();

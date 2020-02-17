@@ -13,6 +13,11 @@ function initButtons() {
     $(".text-wrapper").html(TREEFROG_SERVICE.getHomeContent());
     $(".btn-holder").html(TREEFROG_SERVICE.getHomeStartButton());
   });
+
+  $("#get-started").click(function(e) {
+    console.log("clicked");
+    $(".modal").html(TREEFROG_SERVICE.getModelContent());
+  });
 }
 
 $(document).ready(function() {
