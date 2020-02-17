@@ -16,7 +16,7 @@ function initButtons() {
 
   $("#get-started").click(function(e) {
     console.log("clicked");
-    $(".modal").html(TREEFROG_SERVICE.getModelContent());
+    $(".modal").html(TREEFROG_SERVICE.getModalContent());
   });
 }
 
