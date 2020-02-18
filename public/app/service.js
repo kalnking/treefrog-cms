@@ -4,8 +4,10 @@ var TREEFROG_SERVICE = (function() {
 
     return contentStr;
   };
+
   var _getCreateNavButton = function() {
-    let buttonString = `<span class="btn btn-dark get-started">Create Main Nav</span> <span class="btn btn-dark get-started">Create Sub Nav</span>`;
+    let buttonString = `<span id="test" class="btn btn-dark main-nav">Create Main Nav</span> 
+    <span class="btn btn-dark sub-nav">Create Sub Nav</span>`;
     return buttonString;
   };
 
@@ -36,19 +38,44 @@ var TREEFROG_SERVICE = (function() {
     return startBtn;
   };
 
-  var _getModalContent = function() {
-    let modalContent = `<h2>Use this box to create navigation links.</h2>
-    <br />
-    <p>
-      You can create main navigation and sub navigation. To create a
-      sub-navigation you will need to first select a main nav and then
-      create the sub-nav
-    </p>
-    <br /><br />
-    <p>Using the text box below enter the name of your main navigation.</p>
-    <input type="text" id="inputText" value="Products" />`;
+  var _getCreateMainNavContent = function() {
+    let modalContent = `<div class="alert-box-wrapper">
+    <div class="alert-box-text-wrapper">
+    <h2>Use this box to create navigation links</h2>
+    <p>You can create main navigation and sub navigation. To create sub-navigation you will need to first select a main nav and then create the sub nav.</p>
+    <p>Use the text box below to enter the name of your main navigation.</p>
+    <input placholder="Main Navigation">
+    </div>
+    <div class="alert-box-btn-wrapper">
+    <span class="btn btn-light">Create Sub Nav</span>
+    <span class="btn btn-light">Cancel</span>
+    </div>
+    </div>`;
 
     return modalContent;
+  };
+
+  var _getCreateSubNavContent = function() {
+    let content = `
+          <div class="alert-box-wrapper">
+          <div class="alert-box-text-wrapper">
+          <h2>Create Sub Navigation</h2>
+          <p>In order to create a a sub navigation you need to select a main nav.</p>
+          <p>Select a main navigation</p>
+          <select>
+              <option selected>-----</option>
+          </select>
+          <p>Using the text box below enter the name of your sub navigations</p>
+          <input placholder="Sub Navigation">
+          </div>
+          <div class="alert-box-btn-wrapper">
+          <span class="btn btn-light">Create Sub Nav</span>
+          <span class="btn btn-light cancel-nav">Cancel</span>
+          </div>
+          </div>
+      `;
+
+    return content;
   };
 
   return {
@@ -56,6 +83,7 @@ var TREEFROG_SERVICE = (function() {
     getCreateNavButton: _getCreateNavButton,
     getHomeContent: _getHomeContent,
     getHomeStartButton: _getHomeStartButton,
-    getModalContent: _getModalContent
+    getCreateMainNavContent: _getCreateMainNavContent,
+    getCreateSubNavContent: _getCreateSubNavContent
   };
 })();

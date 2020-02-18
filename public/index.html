@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Treefrog | CMS</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="firebase/7.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/_/firebase/7.8.1/firebase-auth.js"></script>
+    <script defer src="/_/firebase/7.8.1/firebase-database.js"></script>
+    <script defer src="/_/firebase/7.8.1/firebase-messaging.js"></script>
+    <script defer src="/_/firebase/7.8.1/firebase-storage.js"></script>
+    <script defer src="/_/firebase/7.8.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  
   </head>
   <body>
     <nav class="nav">
@@ -57,19 +67,11 @@
     </div>
 
     <div class="modal">
-      <div class="alert-box"></div>
-    </div>
-    <script defer src="firebase/7.8.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="firebase/7.8.1/firebase-auth.js"></script>
-    <script defer src="firebase/7.8.1/firebase-database.js"></script>
-    <script defer src="firebase/7.8.1/firebase-messaging.js"></script>
-    <script defer src="firebase/7.8.1/firebase-storage.js"></script>
-    <script defer src="firebase/7.8.0/firebase-firestore.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-    <script src="lib/jquery.min.js"></script>
-    <script src="app/service.js"></script>
-    <script src="app/app.js"></script>
-  </body>
+      <div class="alert-box"></div></div>
+     
+     
+      <script src="/public/lib/jquery.min.js"></script>
+      <script src="/public/app/service.js"></script>
+      <script src="/public/app/app.js"></script>
+      
 </html>
