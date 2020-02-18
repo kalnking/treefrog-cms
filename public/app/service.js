@@ -5,12 +5,6 @@ var TREEFROG_SERVICE = (function() {
     return contentStr;
   };
 
-  var _getCreateNavButton = function() {
-    let buttonString = `<span class="btn btn-dark main-nav">Create Main Nav</span> 
-    <span class="btn btn-dark sub-nav">Create Sub Nav</span>`;
-    return buttonString;
-  };
-
   var _getHomeContent = function() {
     let homeContent = `<h1>Welcome to the Treefrog CMS</h1>
     <p>
@@ -38,8 +32,15 @@ var TREEFROG_SERVICE = (function() {
     return startBtn;
   };
 
+  var _getCreateNavButton = function() {
+    let buttonString = `<span id="createMainNav" class="btn btn-dark main-nav">Create Main Nav</span> 
+    <span class="btn btn-dark sub-nav">Create Sub Nav</span>`;
+    return buttonString;
+  };
+
   var _getCreateMainNavContent = function() {
-    let modalContent = `<div class="alert-box-wrapper">
+    let modalContent = `
+    <div class="alert-box-wrapper">
     <div class="alert-box-text-wrapper">
     <h2>Use this box to create navigation links</h2>
     <p>You can create main navigation and sub navigation. To create sub-navigation you will need to first select a main nav and then create the sub nav.</p>
@@ -47,7 +48,7 @@ var TREEFROG_SERVICE = (function() {
     <input placholder="Main Navigation">
     </div>
     <div class="alert-box-btn-wrapper">
-    <span class="btn btn-light">Create Sub Nav</span>
+    <span class="btn btn-light closeModal">Create Sub Nav</span>
     <span class="btn btn-light">Cancel</span>
     </div>
     </div>`;
@@ -70,7 +71,7 @@ var TREEFROG_SERVICE = (function() {
           </div>
           <div class="alert-box-btn-wrapper">
           <span class="btn btn-light">Create Sub Nav</span>
-          <span class="btn btn-light cancel-nav">Cancel</span>
+          <span class="btn btn-light closeModal">Cancel</span>
           </div>
           </div>
       `;

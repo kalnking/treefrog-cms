@@ -12,14 +12,34 @@
   color: $white-color;
 }
 
+.btn-light {
+  background-color: $white-color;
+  color: $dark-color;
+}
+
 .modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba($white-color, 0.5);
   display: none;
+
+  .clickBox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba($white-color, 0.5);
+
+    .closeX {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 50px;
+      cursor: pointer;
+      color: $dark-color;
+    }
+  }
 
   .alert-box {
     width: 600px;
@@ -27,5 +47,7 @@
     background-color: $dark-color;
     margin: auto;
     border-radius: 10px;
+    position: relative;
+    z-index: 99;
   }
 }
